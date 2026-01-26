@@ -22,11 +22,5 @@
     },
     "./*": "./*"
   },
-  "sideEffects": false,
-  "buildOptions": {
-    "formats": [
-      "esm-bundler",
-      "cjs"
-    ]
-  }
+  "sideEffects": false
 }

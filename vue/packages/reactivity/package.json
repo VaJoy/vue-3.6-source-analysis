@@ -23,12 +23,7 @@
     "./*": "./*"
   },
   "sideEffects": false,
-  "dependencies": {
-  },
-  "buildOptions": {
-    "formats": [
-      "esm-bundler",
-      "cjs"
-    ]
+  "dependencies": {      
+    "@vue/shared": "workspace:*"
   }
 }
