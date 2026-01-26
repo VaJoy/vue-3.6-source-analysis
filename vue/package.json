@@ -1,0 +1,17 @@
+{
+  "name": "vue",
+  "version": "3.6.0",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
+  "author": "VaJoy Lan",
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "@rollup/plugin-replace": "^6.0.3",
+    "esbuild": "^0.27.2",
+    "rollup": "^4.54.0",
+    "typescript": "^5.9.3"
+  }
+}

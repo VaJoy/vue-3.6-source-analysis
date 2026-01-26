@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "rootDir": ".",
+    "paths": {
+      "@vue/*": ["./packages/*/src"],
+      "*": ["./*"]
+    }
+  },
+  "include": [
+    "packages/global.d.ts",
+    "packages/*/src",
+    "scripts/*",
+    "rollup.*.js"
+  ]
+}
