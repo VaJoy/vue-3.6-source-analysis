@@ -1,2 +1,2 @@
-export * from './general'
-export * from './makeMap'
+export * from "./general";
+export * from "./makeMap";

@@ -1,1 +1,1 @@
-export * from '@vue/shared'  // 仅用于调试
+export * from "@vue/shared"; // 仅用于调试

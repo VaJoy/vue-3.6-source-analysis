@@ -137,4 +137,6 @@ dist
 ./vue-3.6-source-analysis/articles/
 dist
 
+.vscode
 articles/
+tips/

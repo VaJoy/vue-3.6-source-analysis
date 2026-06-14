@@ -1,13 +1,14 @@
 {
   "name": "@vue/reactivity",
   "version": "3.6.0",
-  "main": "index.js",
-  "module": "dist/reactivity.esm-bundler.js",
-  "types": "dist/reactivity.d.ts",
   "files": [
     "index.js",
     "dist"
   ],
+  "sideEffects": false,
+  "main": "index.js",
+  "module": "dist/reactivity.esm-bundler.js",
+  "types": "dist/reactivity.d.ts",
   "exports": {
     ".": {
       "types": "./dist/reactivity.d.ts",
@@ -22,8 +23,16 @@
     },
     "./*": "./*"
   },
-  "sideEffects": false,
-  "dependencies": {      
+  "dependencies": {
     "@vue/shared": "workspace:*"
+  },
+  "buildOptions": {
+    "name": "VueReactivity",
+    "formats": [
+      "esm-bundler",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
   }
 }

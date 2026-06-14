@@ -1,17 +1,23 @@
 {
   "name": "vue",
   "version": "3.6.0",
+  "license": "MIT",
+  "author": "VaJoy Lan",
   "type": "module",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "check": "tsc --incremental --noEmit",
+    "lint": "vp lint",
+    "format": "vp fmt",
+    "format-check": "vp fmt --check",
+    "prepare": "vp config"
   },
-  "author": "VaJoy Lan",
-  "license": "MIT",
-  "packageManager": "pnpm@10.15.1",
   "devDependencies": {
-    "@rollup/plugin-replace": "^6.0.3",
-    "esbuild": "^0.27.2",
-    "rollup": "^4.54.0",
-    "typescript": "^5.9.3"
-  }
+    "@types/node": "^25.9.3",
+    "picocolors": "^1.1.1",
+    "typescript": "^6.0.3",
+    "vite-plus": "^0.1.24",
+    "vitest": "^4.1.8"
+  },
+  "packageManager": "pnpm@11.6.0"
 }
