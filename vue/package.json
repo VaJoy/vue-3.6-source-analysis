@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "build": "node scripts/build.js",
     "check": "tsc --incremental --noEmit",
     "lint": "vp lint",
     "format": "vp fmt",
@@ -13,8 +14,10 @@
     "prepare": "vp config"
   },
   "devDependencies": {
+    "@rolldown/plugin-node-polyfills": "^1.0.3",
     "@types/node": "^25.9.3",
     "picocolors": "^1.1.1",
+    "rolldown": "^1.1.2",
     "typescript": "^6.0.3",
     "vite-plus": "^0.1.24",
     "vitest": "^4.1.8"

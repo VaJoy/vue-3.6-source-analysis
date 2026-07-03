@@ -1,14 +1,9 @@
 {
   "name": "vue-3.6-source-analysis",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "VaJoy",
+  "license": "MIT",
   "packageManager": "pnpm@10.26.2",
   "devDependencies": {
     "vite-plus": "^0.1.24"

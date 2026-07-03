@@ -1,6 +1,21 @@
 import { defineConfig } from 'vite-plus'
+import { entries } from './scripts/aliases.js'
 
 export default defineConfig({
+  /** 宏定义 **/
+  define: {
+    __DEV__: process.env.MODE !== 'benchmark',
+    __TEST__: true,
+    __BROWSER__: false,
+    __GLOBAL__: false,
+    __ESM_BUNDLER__: true,
+    __ESM_BROWSER__: false,
+    __CJS__: true,
+  },
+  /** 别名配置 **/
+  resolve: {
+    alias: entries,
+  },
   /** Vitest 配置 **/
   test: {
     globals: true, // 开启全局 API 能力的支持
