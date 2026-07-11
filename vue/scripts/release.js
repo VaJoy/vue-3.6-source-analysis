@@ -123,6 +123,10 @@ async function main() {
 
   updateVersions(targetVersion)
 
+  // 生成 CHANGELOG 文件
+  step('\nGenerating changelog...')
+  await run('vp', ['run', 'changelog'])
+
   step('\nUpdating lockfile...')
   await run('vp', ['install', '--prefer-offline'])  // 在版本号更新后，需同步修改 pnpm-lock.yaml，把当前依赖解析结果固定下来
 
