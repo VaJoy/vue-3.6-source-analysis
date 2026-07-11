@@ -1,23 +1,35 @@
 {
   "name": "vue",
-  "version": "3.6.0",
+  "version": "3.6.0-beta.17",
   "license": "MIT",
   "author": "VaJoy Lan",
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "dev": "node scripts/dev.js",
     "build": "node scripts/build.js",
+    "build-dts": "node scripts/build-types.js",
     "check": "tsc --incremental --noEmit",
     "lint": "vp lint",
     "format": "vp fmt",
     "format-check": "vp fmt --check",
-    "prepare": "vp config"
+    "prepare": "vp config",
+    "release": "node scripts/release.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "devDependencies": {
     "@rolldown/plugin-node-polyfills": "^1.0.3",
     "@types/node": "^25.9.3",
+    "conventional-changelog": "^8.1.0",
+    "conventional-changelog-angular": "^9.2.1",
+    "enquirer": "^2.4.1",
+    "fast-glob": "^3.3.3",
+    "oxc-parser": "^0.138.0",
+    "oxc-transform": "^0.138.0",
     "picocolors": "^1.1.1",
     "rolldown": "^1.1.2",
+    "rolldown-plugin-dts": "^0.26.0",
+    "semver": "^7.8.5",
     "typescript": "^6.0.3",
     "vite-plus": "^0.1.24",
     "vitest": "^4.1.8"

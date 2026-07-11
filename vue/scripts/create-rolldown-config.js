@@ -8,7 +8,7 @@ import { entries } from './aliases.js'
 const require = createRequire(import.meta.url)
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
-const masterVersion = require('../package.json').version
+const masterVersion = require('../package.json').version  // 版本号，统一取项目根目录包配置中的 version
 
 const packagesDir = path.resolve(__dirname, '../packages')
 
@@ -79,7 +79,7 @@ export function createConfigsForPackage({
       if (format === 'cjs') {
         packageConfigs.push(createProductionConfig(format))
       }
-      if (/^(global|esm-browser)?/.test(format)
+      if (/^(global|esm-browser)$/.test(format)
       ) {
         packageConfigs.push(createProductionConfig(format, true))  // 面向浏览器的构建物需要进行压缩
       }
@@ -102,7 +102,7 @@ export function createConfigsForPackage({
       (isGlobalBuild || isBrowserESMBuild || isBundlerESMBuild) &&
       !packageOptions.enableNonBrowserBranches
 
-    output.postBanner = banner
+    output.postBanner = banner  // 在构建产物头部固定的横幅内容
 
     // 强制将模块的导出打包为 CJS 的属性（即键值对对象），提高「构建工具在处理 ESM+CJS 混用项目时」的兼容性
     output.exports = 'named'
@@ -123,7 +123,6 @@ export function createConfigsForPackage({
       /** @type {Record<string, string>} */
       const defines = {
         __VERSION__: `"${masterVersion}"`,
-        // this is only used during Vue's internal tests
         __TEST__: `false`,
         __BROWSER__: String(isBrowserBuild),
         __GLOBAL__: String(isGlobalBuild),

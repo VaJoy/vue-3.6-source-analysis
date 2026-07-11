@@ -1,11 +1,7 @@
 {
   "name": "vue-3.6-source-analysis",
-  "version": "1.0.0",
-  "keywords": [],
+  "description": "Vue 3.6 源码分析，案例源码放在 vue 子目录",
   "author": "VaJoy",
   "license": "MIT",
-  "packageManager": "pnpm@10.26.2",
-  "devDependencies": {
-    "vite-plus": "^0.1.24"
-  }
+  "packageManager": "pnpm@10.26.2"
 }

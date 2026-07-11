@@ -25,6 +25,10 @@ const { values, positionals: targets } = parseArgs({
       type: 'boolean',
       short: 'p',
     },
+    withTypes: {
+      type: 'boolean',
+      short: 't',
+    },
     sourceMap: {
       type: 'boolean',
       short: 's',
@@ -41,6 +45,7 @@ const {
   all: buildAllMatching,
   devOnly,
   prodOnly,
+  withTypes: buildTypes,
   sourceMap,
 } = values
 
@@ -60,6 +65,9 @@ async function run() {
   const resolvedTargets = targets.length
     ? fuzzyMatchTarget(targets, buildAllMatching)
     : allTargets
+  if (buildTypes) {
+    await import('./build-types.js')
+  }
   await buildAll(resolvedTargets)
 }
 
@@ -118,7 +126,8 @@ function createConfigsForTarget(target) {
   if (formats) {
     const pkgFormats = pkg.buildOptions?.formats
     if (pkgFormats) {
-      if (isNegation) {  // 取反（用户传入的构建格式内容以波浪符 ~ 开头）处理
+      if (isNegation) {
+        // 取反（用户传入的构建格式内容以波浪符 ~ 开头）处理
         resolvedFormats = pkgFormats.filter(
           (/** @type {string} */ f) => !formats.includes(f),
         )
