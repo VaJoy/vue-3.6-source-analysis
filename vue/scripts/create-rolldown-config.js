@@ -79,7 +79,7 @@ export function createConfigsForPackage({
       if (format === 'cjs') {
         packageConfigs.push(createProductionConfig(format))
       }
-      if (/^(global|esm-browser)?/.test(format)
+      if (/^(global|esm-browser)$/.test(format)
       ) {
         packageConfigs.push(createProductionConfig(format, true))  // 面向浏览器的构建物需要进行压缩
       }
