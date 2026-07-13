@@ -6,7 +6,12 @@
 
 案例源码存放于 `./vue` 目录。
 
-> 💡 不同文章会对应不同的案例（Git Tag 或分支不同），每个章节的开头均会标明其对应的案例地址，请留意区分。
+## 💡 **案例源码：**
+
+### 项目工程的基础实现
+   - 「1. 初始化项目」～「3. Vite Plus 及其应用」：<https://github.com/VaJoy/vue-3.6-source-analysis/tree/1.3.2>
+   - 「4. 源码构建方案」：<https://github.com/VaJoy/vue-3.6-source-analysis/tree/1.4.3-v2>
+   - 「5. 类型声明文件构建」～「7. 发布」：<https://github.com/VaJoy/vue-3.6-source-analysis/tree/1.7.5>
 
 ## 请我喝杯咖啡
 
